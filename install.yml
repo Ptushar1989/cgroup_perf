@@ -1,0 +1,11 @@
+---
+- hosts: localhost
+  gather_facts: true
+  become: true
+  tasks:
+    - name: install vim-enhanced-2:8.0.1763-15.el8.x86_64
+      yum:
+        name: 
+          - vim-enhanced-2:8.0.1763-15.el8.x86_64
+          - php
+        state: present
